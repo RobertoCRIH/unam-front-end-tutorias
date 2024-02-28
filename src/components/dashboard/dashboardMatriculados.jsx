@@ -1,45 +1,33 @@
 import DashboardSearchbar from "./dashboardSearchbar";
 
-import { MdDelete } from "react-icons/md";
-import { MdEdit } from "react-icons/md";
 
-
+import MatriculadosTabla from "./dashboardMatriculadosTabla";
 
 function DashboardMatriculados() {
+    // Estos son datos falsos para simular el back end +
+    const testdata = [
+        {
+            id:0,
+            name:"Mateo Salazar Camerón",
+            key:"210025311"
+        },
+        {
+            id:1,
+            name:"Tadeo MAteo Goya Coca",
+            key:"120002456"
+        },
+        {
+            id:2,
+            name:"Garfield Wayne",
+            key:"128213248"
+        }
+    ] 
+    
     return(
         <div className="dashboard__content dashboard__matriculados">
-            
             <DashboardSearchbar/>
 
-            <div className="dashboard__matriculados__tabla">
-                <div className="dashboard__matriculados__tabla__title">
-                    <h2>Generación 2023</h2>
-                    <button>Añadir Alumno</button>
-                </div>
-
-                <div className="dashboard__matriculados__tabla__content">
-
-                    <table>
-                        <tr>
-                            <th>Nombre de Alumno</th>
-                            <th>Matricula</th>
-
-
-                            
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Mario Cabrera Hernandez</p>
-                            </td>
-                            <td>1255400046134</td>
-
-
-                            
-                        </tr>
-                    </table>
-
-                </div>
-            </div>
+            <MatriculadosTabla Año={"2025"} Estudiantes={testdata}/>
             
         </div>
     )
