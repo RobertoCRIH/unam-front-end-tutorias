@@ -31,7 +31,7 @@ function DashboardNav() {
                 <p>Iniciaste sesión como</p>
                 <div className="dashboard__nav__footer__content">
                     <img src={userImg} alt="" />
-                    <p>María Fernanda Martinez Ferrero</p>
+                    <p>María Martinez Ferrero</p>
                 </div>
             </div>
             

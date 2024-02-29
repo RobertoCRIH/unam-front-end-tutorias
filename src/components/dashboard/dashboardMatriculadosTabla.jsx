@@ -1,13 +1,9 @@
-
-import { useState } from "react";
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 
 
-
-
-
-
+import "../../assets/styles/modal.scss"
 
 function MatriculadosTabla({Año,Estudiantes}) {
     
@@ -51,8 +47,19 @@ function MatriculadosTabla({Año,Estudiantes}) {
                        
                         
                     </table>
+                    
+                </div>
 
-
+                <div className="modal">
+                    <div className="modal__container">
+                        <div className="modal__header">
+                            <div className="modal__header__text">Edita un alumno</div>
+                            <button> <IoIosCloseCircleOutline style={{color:"red",fontSize:"35px"}}/> </button>
+                        </div>
+                        <div className="modal__content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, itaque quasi necessitatibus a suscipit sunt ea aperiam unde minus consectetur, non mollitia nemo ipsa quidem maiores maxime quisquam, tenetur atque?
+                        </div>
+                    </div>
                 </div>
             </div>
     )

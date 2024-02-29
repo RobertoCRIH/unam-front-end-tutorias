@@ -31,7 +31,7 @@ body{
         &__menu{
 
             padding: 15px 10%;
-            height: 75vh;
+            height: 70vh;
             overflow-y: hidden;
             border-bottom: 1px solid gray;
 
@@ -62,6 +62,7 @@ body{
         }
 
         &__footer{
+            
             overflow-y: hidden;
             & p{
                 text-align: center;
