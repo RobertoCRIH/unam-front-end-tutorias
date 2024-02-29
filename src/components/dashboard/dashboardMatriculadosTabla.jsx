@@ -53,11 +53,17 @@ function MatriculadosTabla({Año,Estudiantes}) {
                 <div className="modal">
                     <div className="modal__container">
                         <div className="modal__header">
-                            <div className="modal__header__text">Edita un alumno</div>
+                            <div className="modal__header__text">¿Deseas eliminar a este alumno?</div>
                             <button> <IoIosCloseCircleOutline style={{color:"red",fontSize:"35px"}}/> </button>
                         </div>
                         <div className="modal__content">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, itaque quasi necessitatibus a suscipit sunt ea aperiam unde minus consectetur, non mollitia nemo ipsa quidem maiores maxime quisquam, tenetur atque?
+                        </div>
+
+                        <div className="modal__footer">
+                            <button className="modal__footer__false">False</button>
+                            <button className="modal__footer__true">True</button>
+                            
                         </div>
                     </div>
                 </div>
