@@ -1,0 +1,58 @@
+//Variables
+$mainRed: #B31312;
+
+$fontgrey: #404040;
+
+$editBttn: #4B5AD7;
+.cardT{
+    border: 1px solid $mainRed;
+    
+
+    &__header{
+        padding: 10px 0;
+        background-color: $mainRed;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__body{
+        // background-color: blue;
+        padding: 15px;
+        &__row{
+            margin-top: 12px;
+            display: flex;
+            // flex-wrap: wrap;
+            gap: 10px;
+            color: $fontgrey;
+
+            & .title{
+                // background-color: green;
+                width: 200px;
+                font-weight: bold;
+                color: black;
+            }
+        }
+    }
+
+    &__footer{
+        padding: 10px;
+
+        & button{
+            cursor: pointer;
+            padding: 5px 15px;
+            border-radius: 25px;
+        }
+        &__edit{
+            background-color: $editBttn;
+            border: 1px solid $editBttn;
+            color: white;
+            margin-right: 25px;
+        }
+        &__delete{
+            background-color: $mainRed;
+            border: 1px solid $mainRed;
+            color: white;
+        }
+    }
+}

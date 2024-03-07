@@ -1,0 +1,18 @@
+$mainBlue : #003A66;
+
+.myNav{
+    display: flex;
+    background-color: $mainBlue;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
+    &__title{
+        color: white;
+        font-size: 16px;
+        
+    }
+
+    & img{
+        height: 120px;
+    }
+}
