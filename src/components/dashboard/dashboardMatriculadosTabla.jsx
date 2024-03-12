@@ -1,19 +1,41 @@
-
-import { useState } from "react";
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 
 
-
-
-
-
+import "../../assets/styles/modal.scss"
+import MyModal from "../general/modal";
+import { useState } from "react";
 
 function MatriculadosTabla({Año,Estudiantes}) {
-    
+    //Estos son los estados que abren los modales
+    const [modalEdit,setModalEdit]= useState(false)
+    const [modalErase,setModalErase] = useState(false)
+
+    //Esto le pasa el id al modal para luego editar este campo
+    //BORRAR LUEGO TAL VEZ ???
+    const [editId,setEditId] = useState();
+
+     function editFunction () {
+        console.log("Edit Function working")
+    }
 
     return(
         <div className="dashboard__matriculados__tabla">
+            <MyModal visible={modalEdit} turnOff={setModalEdit} title={"Editar a este alumno"} bttn={"Editar Alumno"}>
+                    <div className="modal__content__center">Id del Estudiante: {editId}</div>
+
+                    <div className="modal__content__tag">Escribe el nombre del alumno</div>
+                    <input type="text" placeholder="Ej. Juan Hernandez" />
+                    <div className="modal__content__ass">*Asegurate de escribir bien el nombre</div>
+
+                    <div className="modal__content__tag">Escribe la nueva matricula</div>
+                    <input type="text" placeholder="Ej. 1012321" />
+            </MyModal>
+
+            <MyModal visible={modalErase} turnOff={setModalErase} title={"Eliminar alumno"} bttn={"Eliminar Alumno"} acceptFunction={editFunction()}>
+                    <div className="modal__content__center">Luisito Testeo</div>
+            </MyModal>
+
                 <div className="dashboard__matriculados__tabla__title">
                     <h2>Generación {Año}</h2>
                     <button>Añadir Alumno</button>
@@ -39,8 +61,16 @@ function MatriculadosTabla({Año,Estudiantes}) {
                                     <td>{i.key}</td>
                                     <td style={{width:"50px"}}>
                                         {/* Boton de Editar  */}
-                                        <button> <MdEdit style={{fontSize:"25px", color:"green"}}/> </button>
-                                        <button> <MdDelete style={{fontSize:"25px", color:"red"}}/> </button>
+
+                                        <button onClick={(e)=>{
+                                                setModalEdit(true);
+                                                setEditId(i.id);
+                                            }}> <MdEdit style={{fontSize:"25px", color:"green"}}/> </button>
+                                        
+                                        {/* Boton de borrar  */}
+                                        <button onClick={(e)=>{
+                                            setModalErase(true);
+                                        }}> <MdDelete style={{fontSize:"25px", color:"red"}}/> </button>
 
                                     </td>
                                     
@@ -48,12 +78,15 @@ function MatriculadosTabla({Año,Estudiantes}) {
                             )
                         })}
                         
-                       
-                        
                     </table>
-
-
+                    
                 </div>
+
+                
+                
+
+                
+
             </div>
     )
 }

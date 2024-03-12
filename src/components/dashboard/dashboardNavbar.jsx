@@ -17,10 +17,10 @@ function DashboardNav() {
 
             <div className="dashboard__nav__menu">
 
-                <DashboardMenuItem path={"/"} icon={studentIcon} name={"Alumnos Matriculados"} />
-                <DashboardMenuItem path={"/"} icon={teacherIcon} name={"Tutoría"} />
-                <DashboardMenuItem path={"/"} icon={podioIcon} name={"Núcle Académico"} />
-                <DashboardMenuItem path={"/"} icon={adminIcon} name={"Administrador"} />
+                <DashboardMenuItem path={"/dashboard/alumnos_matriculados"} icon={studentIcon} name={"Alumnos Matriculados"} />
+                <DashboardMenuItem path={"/dashboard/tutorias"} icon={teacherIcon} name={"Tutoría"} />
+                <DashboardMenuItem path={"/dashboard/nucleo_academico"} icon={podioIcon} name={"Núcleo Académico"} />
+                <DashboardMenuItem path={"/dashboard/admins"} icon={adminIcon} name={"Administrador"} />
 
                 
                 
@@ -31,7 +31,7 @@ function DashboardNav() {
                 <p>Iniciaste sesión como</p>
                 <div className="dashboard__nav__footer__content">
                     <img src={userImg} alt="" />
-                    <p>María Fernanda Martinez Ferrero</p>
+                    <p>María Martinez Ferrero</p>
                 </div>
             </div>
             

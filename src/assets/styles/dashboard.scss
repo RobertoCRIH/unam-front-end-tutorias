@@ -7,7 +7,7 @@ body{
 
     &__nav{
         background-color: white;
-        width: 20%;
+        width: 20vw;
         max-width: 285px;
         min-width: 200px;
         
@@ -31,7 +31,7 @@ body{
         &__menu{
 
             padding: 15px 10%;
-            height: 75vh;
+            height: 70vh;
             overflow-y: hidden;
             border-bottom: 1px solid gray;
 
@@ -62,6 +62,7 @@ body{
         }
 
         &__footer{
+            
             overflow-y: hidden;
             & p{
                 text-align: center;
@@ -108,6 +109,7 @@ body{
                 & input{
                     flex-grow: 1;
                     border: none;
+                    background-color: transparent;
                     &:focus{
                         outline: none;
                     }
@@ -180,12 +182,178 @@ body{
 
         
     }
+
+    //Esto es lo de las tutorias
+    &__tutorias{
+        &__menu{
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            
+            &__item{
+                text-decoration: none;
+                background-color: #B31312;
+                color: white;
+                min-width: 300px;
+                max-width: 500px;
+
+                height: 100px;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 15px;
+
+                
+            }
+        }
+    }
+
+    &__tutoriasAño{
+
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+        grid-auto-rows: minmax(100px,auto);
+    }
+
+    &__nucleo{
+
+        &__button{
+            padding: 10px 0;
+
+            & button{
+                background-color: #4B5AD7;
+                padding: 5px 15px;
+                color: white;
+                border: none;
+                border-radius: 15px;
+                cursor: pointer;
+            }
+        }
+        
+        &__table{
+            background-color: white;
+            border-radius: 20px;
+            border: 1px solid grey;
+            overflow: hidden;
+            
+            & table{
+                border-collapse: collapse;
+                width: 100%;
+                border-radius: 20px;
+                
+                
+                & tr{
+                    border: 1px solid grey;
+                }
+
+                & th{
+                    padding: 10px 0;
+                    font-weight: bold;
+                    font-size: 16px;
+                    
+                }
+
+                & td{
+                    border: 1px solid grey;
+                    padding: 5px 10px;
+                    & button{
+                        border: none;
+                        background-color: transparent;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    &__admins{
+        
+        &__content{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        &__card{
+            border: 1px solid grey;
+            padding: 25px;
+            flex-grow: 1;
+            min-width: 350px;
+            max-width: 450px;
+
+            box-shadow: 10px 10px 5px 0px rgba(128,128,128,0.75);
+            -webkit-box-shadow: 10px 10px 5px 0px rgba(128,128,128,0.75);
+            -moz-box-shadow: 10px 10px 5px 0px rgba(128,128,128,0.75);
+
+            &__row{
+                display: flex;
+                align-items: center;
+                margin: 20px 0;
+
+                & .title{
+                    margin-right: 20px;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+            }
+            &__rowBttns{
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 0;
+                & button{
+                    font-size: 14px;
+                    border-radius: 25px;
+                    padding: 3px 15px;
+                    cursor: pointer;
+                    color: white;
+                    transition: 0.5s;
+                }
+                & .update{
+                    background-color: #4B5AD7;
+                    border: 1px solid #4B5AD7;
+                    &:hover{
+                        background-color: white;
+                        color: #4B5AD7;
+                    }
+                }
+
+                & .delete{
+                    background-color: #B31312;
+                    border: 1px solid #B31312;
+                    &:hover{
+                        background-color: white;
+                        color: #B31312;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width:600px) {
     .dashboard{
         &__nav{
             display: none;
+        }
+
+        &__content{
+            &__searchbar{
+                width: 90%;
+                
+                & div{
+                    width: 100%;
+                }
+            }
+        }
+
+        &__tutoriasAño{
+            display: block;
         }
     }
 }

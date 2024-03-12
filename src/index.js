@@ -9,6 +9,10 @@ import Home from './routes/home';
 import LoginDashboard from './routes/loginDashboard';
 import Dashboard from './routes/dashboard';
 import DashboardMatriculados from './components/dashboard/dashboardMatriculados';
+import DashboardTutorias from './components/dashboard/dashboardTutorias';
+import DashboardTutoriasAño from './components/dashboard/dashboardTutoriasAño';
+import DashboardNucleo from './components/dashboard/dashboardNucleo';
+import DashboardAdmins from './components/dashboard/dashboardAdmins';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +30,22 @@ const router = createBrowserRouter([
       {
         path:"alumnos_matriculados",
         element:<DashboardMatriculados/>
+      },
+      {
+        path:"tutorias",
+        element: <DashboardTutorias/>,
+      },
+      {
+        path:"tutorias_año", //Aquí irá una cosa para poder tomar la id que buscamos
+        element: <DashboardTutoriasAño/>
+      },
+      {
+        path:"nucleo_academico",
+        element: <DashboardNucleo/>
+      },
+      {
+        path:"admins",
+        element: <DashboardAdmins/>
       }
     ]
   }
