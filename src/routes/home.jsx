@@ -1,7 +1,11 @@
 import Navbar from "../components/general/navbar";
 import "../assets/styles/body.scss"
 import "../assets/styles/homeFooter.scss"
+
 import { useState } from "react";
+
+import { IoIosMenu } from "react-icons/io";
+
 import Intro from "../components/home/intro";
 import Perfil from "../components/home/perfilIngreso";
 import Objetivos from "../components/home/objetivos";
@@ -37,6 +41,8 @@ function Home() {
     ]
 
     const [visible,setVisible] = useState(homeButtons[0]);
+
+    const [indexMobilVisible,setIndexMobilVisible] = useState(false);
 
     function homeState() {
         switch (visible) {
@@ -149,7 +155,34 @@ function Home() {
         
             <Navbar/>
 
+            {/* Este es el index que va a aparecer en telefonols */}
+            <div className="body__MobilBttn">
+                <button onClick={(e)=>setIndexMobilVisible(!indexMobilVisible)}> <IoIosMenu/> Menú</button>
+            </div>
+            <div className="body__indexMobil">
+                    {   
+                        
+                        homeButtons.map((i)=>{
+                            if (indexMobilVisible) {
+                                return(
+                                    <div className="body__index__item">
+                                        <button onClick={(e)=>{ 
+                                            setVisible(i)
+                                            setIndexMobilVisible(false);
+                                            }}>
+                                            {i}
+                                        </button>
+                                    </div>
+                                ) 
+                            }
+                            
+                        })
+                    }
+            </div>
+
             <div className="body">
+
+                
 
                 <div className="body__index">
 
