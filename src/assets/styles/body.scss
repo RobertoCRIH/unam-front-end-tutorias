@@ -5,21 +5,11 @@ $pussyBlue: #4B5AD7;
     padding: 50px 10vw;
     display: flex;
     &__MobilBttn{
-        background-color: rgb(209, 209, 209);
-
-        & button{
-            font-size: 16px;
-            padding: 10px 20px;
-            width: 100%;
-            text-align: left;
-            background: none;
-            border: none;
-        }
+        display: none;
     }
     &__indexMobil{
         
-        background-color: white;
-        z-index: 100;
+        display: none;
     }
     &__index{
         min-width: 250px;
@@ -222,6 +212,27 @@ $pussyBlue: #4B5AD7;
         &__index{
             display: none;
         }
+
+        &__MobilBttn{
+            display: block;
+            background-color: rgb(209, 209, 209);
+    
+            & button{
+                font-size: 16px;
+                padding: 10px 20px;
+                width: 100%;
+                text-align: left;
+                background: none;
+                border: none;
+            }
+        }
+        &__indexMobil{
+            display: block;
+            background-color: white;
+            z-index: 100;
+        }
+
+
 
         &__content{
             padding: 20px;
