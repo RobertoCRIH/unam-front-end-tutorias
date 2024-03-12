@@ -4,6 +4,23 @@ $pussyBlue: #4B5AD7;
 .body{
     padding: 50px 10vw;
     display: flex;
+    &__MobilBttn{
+        background-color: rgb(209, 209, 209);
+
+        & button{
+            font-size: 16px;
+            padding: 10px 20px;
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+        }
+    }
+    &__indexMobil{
+        
+        background-color: white;
+        z-index: 100;
+    }
     &__index{
         min-width: 250px;
         width: 250px;
