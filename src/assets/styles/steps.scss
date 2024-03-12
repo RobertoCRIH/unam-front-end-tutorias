@@ -1,0 +1,48 @@
+$pussyBlue: #4B5AD7;
+$mainBlue : #003A66;
+.stepContainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(200px, auto);
+}
+
+.steps{
+    background-color: $mainBlue;
+    display: flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    border: 1px solid grey;
+    
+    
+
+    &__number{
+        // margin: 10px 20px;
+        height: 100%;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        
+        // border: 5px solid black;
+
+        font-size: 30px;
+
+        // background-color: $pussyBlue;
+        // color: white;
+    }
+
+    &__text{
+        font-size: 20px;
+        margin: 20px 10px;
+        
+        
+        
+        &__sub{
+            padding: 5px 0;
+            font-size: 16px;
+        }
+    }
+}

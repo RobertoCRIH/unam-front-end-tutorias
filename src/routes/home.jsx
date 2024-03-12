@@ -1,5 +1,6 @@
 import Navbar from "../components/general/navbar";
 import "../assets/styles/body.scss"
+import "../assets/styles/homeFooter.scss"
 import { useState } from "react";
 import Intro from "../components/home/intro";
 import Perfil from "../components/home/perfilIngreso";
@@ -10,6 +11,11 @@ import LineasDeGeneracion from "../components/home/lineasDeGenracion";
 import Tutorias from "../components/home/tutorias";
 import Alumnos from "../components/home/alumnos";
 import Proactividad from "../components/home/proactividad";
+import Vinculacion from "../components/home/vinculacion";
+import ProcesoAdministrativo from "../components/home/procesoAdministrativo";
+import MediosVerificacion from "../components/home/mediosVerificacion";
+import Conacyt from "../components/home/conacyt";
+import AccesosInst from "../components/home/accesosInst";
 function Home() {
 
     const homeButtons = [
@@ -27,8 +33,7 @@ function Home() {
         "Medios de verificación PNPC",
         "CONACYT",
         "Accesos institucionales",
-        "Ir al instituto de silvicultura e insdustria de la madera",
-        "Ir a la Facultad de Medicina, Veterinaria y Zooctenia"
+
     ]
 
     const [visible,setVisible] = useState(homeButtons[0]);
@@ -98,6 +103,41 @@ function Home() {
                         <Proactividad/>
                     )
                 break;
+
+                case (homeButtons[9]):
+                    //ESTO ES VINCULACION
+                return(
+                        <Vinculacion/>
+                    )
+                break;
+
+                case (homeButtons[10]):
+                    //ESTO ES PROCESOS ADMINISTRATIVOS
+                    return(
+                        <ProcesoAdministrativo/>
+                    )
+                break;
+                
+                case (homeButtons[11]):
+                    //Medios de verificacion pnpc
+                    return(
+                        <MediosVerificacion/>
+                    )
+                break;
+
+                case (homeButtons[12]):
+                    //CONACYT
+                    return(
+                        <Conacyt/>
+                    )
+                break;
+
+                case (homeButtons[13]):
+                    //ACCESOS INSTITUCIONALES
+                    return(
+                        <AccesosInst/>
+                    )
+                break;
         
             default:
                 break;
@@ -129,6 +169,20 @@ function Home() {
 
                 <div className="body__content">
                     {homeState()}
+                </div>
+
+                
+            </div>
+
+            <div className="homeFooter">
+                <div className="homeFooter__text">
+                    Maestría Institucional en Ciencias Agropecuarias y Forestales
+                </div>
+
+                <div className="homeFooter__text">
+                Facultad de Medicina Veterinaria y Zootecnia de la Universidad Juárez del Estado de Durango. <br /> 
+                Carretera Durango-Mezquital Km. 11.5. Durango, Dgo. México. <br />
+                Tels. (618) 818 9932 y 810 0703,micaf@ujed.mx micaf_ujed@ujed.mx
                 </div>
             </div>
         </>

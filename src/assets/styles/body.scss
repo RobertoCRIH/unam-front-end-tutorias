@@ -103,6 +103,7 @@ $pussyBlue: #4B5AD7;
             display: flex;
             flex-wrap: wrap;      
             gap: 5px;      
+            
             & button{
                 padding: 10px 15px;
                 background-color: transparent;
@@ -116,6 +117,12 @@ $pussyBlue: #4B5AD7;
                     -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
                 }
             }
+
+            & .greenVariant{
+                width: 150px;
+                font-size: 12px;
+                padding: 10px 5px;
+            }
             & .selected{
                 background-color: $mainBlue;
                 color: white;
@@ -123,6 +130,7 @@ $pussyBlue: #4B5AD7;
         }
 
         &__tutorias{
+
             padding: 15px 0;
             display: grid;
             grid-template-columns: repeat(2,1fr);
@@ -131,6 +139,7 @@ $pussyBlue: #4B5AD7;
         }
 
         &__subnav{
+            margin-bottom: 20px;
             display: flex;
             width: max-content;
             border-radius: 10px;
@@ -140,17 +149,74 @@ $pussyBlue: #4B5AD7;
                 padding: 10px 20px;
                 cursor: pointer;
                 background-color: transparent;
-
+                transition: 0.1s;
                 border: none;
 
                 &:hover{
-                    
+                    background-color: $pussyBlue;
+                    color: white;
                 }
             }
 
             & .selected{
                 background-color: $pussyBlue;
                 color: white;
+            }
+        }
+
+
+    }
+}
+
+.sublogin{
+    width: 300px;
+    border: 1px solid grey;
+    padding: 10px;
+
+    & .title{
+        font-size: 20px;
+        font-weight: bold;
+        justify-content: center;
+        text-align: center;
+        margin: 10px;
+    }
+
+    & input{
+        
+        border-radius: 10px;
+        padding: 5px 10px;
+        border: 1px solid gray;
+    }
+
+    & button{
+        cursor: pointer;
+        padding: 5px 20px;
+        border-radius: 25px;
+        border: none;
+        background-color: $pussyBlue;
+        color: wheat;
+    }
+}
+
+//Movil
+@media(max-width: 600px){
+    .body{
+        padding: 0;
+        &__index{
+            display: none;
+        }
+
+        &__content{
+            padding: 20px;
+            &__subnav{
+                width: fit-content;
+                display: flex;
+                flex-wrap: wrap;                
+                & button{
+                    padding: 10px 20px;
+                    width: 100%;
+                   
+                }
             }
         }
     }
@@ -231,4 +297,4 @@ $pussyBlue: #4B5AD7;
     }
   }
   
-  
+
