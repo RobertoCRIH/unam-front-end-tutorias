@@ -5,6 +5,7 @@ import "../assets/styles/homeFooter.scss"
 import { useState } from "react";
 
 import { IoIosMenu } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 import Intro from "../components/home/intro";
 import Perfil from "../components/home/perfilIngreso";
@@ -197,7 +198,10 @@ function Home() {
                             )
                         })
                     }
-
+                    <div className="body__index__item" style={{padding:"10px 20px"}}>
+                        <Link to={{pathname:"/dashboard/alumnos_matriculados"}}>Admin</Link>
+                    </div>
+                    
                 </div>
 
                 <div className="body__content">
